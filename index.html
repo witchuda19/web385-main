@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/product.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <title>Product Page</title>
+
+</head>
+<body>
+  <div class="top-bar">
+    <p class="top-bar-text">Case iPhone </p>
+    <div class="cart-icon">🛒   <span id="cart-total"></span></div>
+    <div class="cart-total">Total: <span id="total-price">0</span> บาท</div>
+</div>
+<header class="site-header">
+  <div class="carousel">
+    <div class="carousel-item"><img src="/case1-removebg-preview (1).png" alt="case1"></div>
+    <div class="carousel-item"><img src="/case2-removebg-preview (1).png" alt="case2"></div>
+    <div class="carousel-item"><img src="/image-removebg-preview (1).png" alt="case3"></div>
+    <div class="carousel-item"><img src="/case4.png" alt="case4"></div>
+   
+  </div>
+  <div class="product-list">
+    <div class="product-row">
+    
+  </div>
+  <div class="product-card">
+    <img src="/MM283.jpg" alt="case1">
+    <h2>Silicone case</h2>
+    <h4>1,200 บาท</h4>
+    <div class="quantity">
+      <div class="product-description">
+        <p>Silicone case เคสซิลิโคน พื้นผิวซิลิโคนด้านนอกให้สัมผัสที่เรียบลื่นนุ่มนวล สีพื้นเรียบหรู </p>
+      </div>
+      <button class="decrease-button" onclick="minus1('quantity1')">-</button>
+      <span class="product-quantity" id="quantity1">0</span>
+      <button class="increase-button" onclick="pluse1('quantity1')">+</button>
+  </div>
+  
+</div>
+
+<div class="product-card">
+    <img src="/Casetify-Casing-for-iPhone-13-(6.1-inch)-Impact-Case-Animal-Collection-Cat-(CTF-3665476-16003241)-2-square_medium.jpg" alt="case2">
+    <h2>DIY case</h2>
+    <h4>1,500 บาท</h4>
+    <div class="quantity">
+      <div class="product-description">
+        <p>DIY Silicone case เคสซิลิโคนที่สามารถออกแบบตัวการ์ตูน หรืออิโมจิ ด้านหลังของเคสคุณเองได้ตามแบบที่คุณต้องการ </p>
+      </div>
+      <button class="decrease-button" onclick="minus1('quantity2')">-</button>
+      <span class="product-quantity" id="quantity2">0</span>
+      <button class="increase-button" onclick="pluse1('quantity2')">+</button>
+  </div>
+</div>
+
+<div class="product-card">
+    <img src="/MM2X3_AV3.jpg" alt="case3">
+    <h2>Magsafe case</h2>
+    <h4>1,300 บาท</h4>
+    <div class="quantity">
+      <div class="product-description">
+        <p>Magsafe case เคสซิลิโคนที่มาพร้อมกับตัว Magsafe ด้านหลังและรอบๆตัวของเคสจะเป็นสีใสพร้อมโชว์ตัวของ Magsafe  </p>
+      </div>
+      <button class="decrease-button" onclick="minus1('quantity3')">-</button>
+      <span class="product-quantity" id="quantity3">0</span>
+      <button class="increase-button" onclick="pluse1('quantity3')">+</button>
+  </div>
+</div>
+
+<div class="product-card">
+    <img src="/Wroof-Casing-for-iPhone-14-(6.1)-Urban-Crystal-Crystal-Clear-1-square_medium.jpg" alt="case4">
+    <h2>Shockproof case</h2>
+    <h4>900 บาท</h4>
+    <div class="quantity">
+      <div class="product-description">
+        <p>Shockproof case เคสซิลิโคนที่มาพร้อมกันกระแทก รอบๆตัวของเคสจะมีปุ่มกันกระแทกทั้ง 4 ทิศ และยังเป็นสีใส </p>
+      </div>
+      <button class="decrease-button" onclick="minus1('quantity4')">-</button>
+      <span class="product-quantity" id="quantity4">0</span>
+      <button class="increase-button" onclick="pluse1('quantity4')">+</button>
+  </div>
+</div>
+</div>
+<script>
+  function pluse1() {
+    var counter = parseInt(document.getElementById("quantity1").innerText);
+    counter++;
+    document.getElementById("quantity1").innerText = counter;
+  }
+  
+  function minus1() {
+    var counter = parseInt(document.getElementById("quantity1").innerText);
+    if (counter > 0) {
+      counter--;
+      document.getElementById("quantity1").innerText = counter;
+    }
+  }
+</script>
+  <style>
+    .required-text {
+      color: red;
+    }
+    
+  </style>
+  
+  
+  <form>
+    <fieldset>
+
+
+      <legend> <h2>ข้อมูลการสั่งซื้อสินค้า</h2> </legend>
+      <label for="full-name">ชื่อ-นามสุกล</label>
+      <input type="text" id="full-name" name="ชื่อ-นามสุกล">
+      
+      <label for="mobile-phone">โทรศัพท์มือถือ</label>
+      <input type="text" id="mobile-phone" name="โทรศัพท์มือถือ">
+      <span class="required-text"> *โปรดระบุ</span><br>
+      <br>
+
+      <label for="E-mail">E-mail</label>
+      <input type="text" id="E-mail" name="E-mail"><br>
+      <br>
+  
+   
+      <label for="ที่อยู่">ที่อยู่</label>
+      <input type="text" id="ที่อยู่" name="ที่อยู่"><br>
+      <br>
+
+      <label for="รหัสไปรษณีย์">รหัสไปรษณีย์</label>
+      <input type="text" id="รหัสไปรษณีย์" name="รหัสไปรษณีย์"><br>
+      <br>
+      
+      <label for="note">หมายเหตุ</label>
+      <input type="text" id="note" name="note"><br>
+      <br>
+      <div class="container">
+        <div class="fai1"><input type="reset"> <input type="submit"></div>
+          <br><span class="required-text"> *เมื่อซื้อสินค้าครบ 1,000 บาท จะได้รับส่วนลด 10%</span>
+    </fieldset>
+   
+  </form>
+  
+  <script>
+    const products = [
+      { name: 'Silicone case', price: 1200 },
+      { name: 'DIY case', price: 1500 },
+      { name: 'Magsafe case', price: 1300 },
+      { name: 'Shockproof case', price: 900},
+    ];
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const decreaseQuantityButtons = document.querySelectorAll('.decrease-quantity');
+    const increaseQuantityButtons = document.querySelectorAll('.increase-quantity');
+    const productQuantitySpans = document.querySelectorAll('.product-quantity');
+    const itemList = document.querySelector('.item-list');
+    const totalPriceSpan = document.querySelector('.total-price');
+    
+    const cart = [];
+    let total = 0;
+
+    addToCartButtons.forEach((button, index) => {
+  let quantity = 1;
+  
+  decreaseQuantityButtons[index].addEventListener('click', () => {
+    if (quantity > 1) {
+      quantity--;
+      productQuantitySpans[index].textContent = quantity;
+    }
+  });
+
+  increaseQuantityButtons[index].addEventListener('click', () => {
+    quantity++;
+    productQuantitySpans[index].textContent = quantity;
+  });
+  
+  button.addEventListener('click', () => {
+    cart.push({
+      name: products[index].name,
+      price: products[index].price,
+      quantity: quantity
+    });
+
+    total += products[index].price * quantity;
+
+
+    if (total >= 1000) {
+      total *= 0.9;
+    }
+
+    updateCartItems();
+  });
+});
+
+function updateCartItems() {
+  itemList.innerHTML = '';
+  cart.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = `${item.name} (${item.quantity} ชิ้น) - ${item.price * item.quantity.toFixed(2)} ฿`;
+    itemList.appendChild(li);
+  });
+
+  totalPriceSpan.textContent = `${total.toFixed(2)} ฿`;
+}
+</script>
+  
+  
+</div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="/product.js"></script>
+</body>
+</html>
